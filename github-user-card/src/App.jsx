@@ -35,8 +35,9 @@ class App extends Component {
     return ( 
       <div className="container">
         <Follower imgUrl={this.state.githubUser.avatar_url} login={this.state.githubUser.login}/>
+        <h1>Followers</h1>
         { this.state.githubFollowers.map( (follower) => {
-          return <Follower key={follower.id} imgUrl={follower.avatar_url} name={follower.name} login={follower.login} />
+          return <Follower key={follower.id} imgUrl={follower.avatar_url} login={follower.login}/>
         })
         }
       </div>
